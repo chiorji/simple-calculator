@@ -29,7 +29,6 @@ public class CalculatorController {
 
     @FXML
     protected void processOperators(ActionEvent event) {
-        System.out.println(((Button) event.getSource()).getText());
         String op = ((Button) event.getSource()).getText();
         if (!op.equals("=")) {
             if (!operator.isEmpty()) return;

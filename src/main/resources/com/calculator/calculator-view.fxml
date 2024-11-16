@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.CalculatorController">
+<VBox id="root" alignment="CENTER" blendMode="DARKEN" maxHeight="400.0" maxWidth="300.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.CalculatorController">
    <children>
-      <VBox prefHeight="150.0" prefWidth="100.0">
+      <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0">
          <children>
-            <Label fx:id="accumulator" alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="300.0" textAlignment="RIGHT" textFill="GOLDENROD">
+            <Label fx:id="accumulator" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="300.0" textAlignment="RIGHT" textFill="WHITE">
                <padding>
                   <Insets left="8.0" right="8.0" />
                </padding>
             </Label>
-            <Label fx:id="result" alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="300.0">
+            <Label fx:id="result" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="300.0">
                <font>
                   <Font size="32.0" />
                </font>
@@ -24,7 +24,7 @@
                   <Insets right="12.0" />
                </padding>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="300.0" text="Awesome Calculator" textAlignment="RIGHT">
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="300.0" text="Basic Calculator" textAlignment="RIGHT" textFill="WHITE">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -33,46 +33,22 @@
       </VBox>
       <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="7">
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" styleClass="operator-buttons" text="/">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="8">
+            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="7">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="9">
+            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="8">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" text="/">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-         </children>
-      </HBox>
-      <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="4">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="5">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="6">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" text="*">
+            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="9">
                <font>
                   <Font size="18.0" />
                </font>
@@ -81,22 +57,22 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="1">
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" styleClass="operator-buttons" text="*">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="2">
+            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" text="3">
+            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" text="-">
+            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="6">
                <font>
                   <Font size="18.0" />
                </font>
@@ -105,17 +81,41 @@
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>
-            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="40.0" prefWidth="106.0" text="0">
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" styleClass="operator-buttons" text="-">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" text="=">
+            <Button mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefWidth="50.0" text="+">
+            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefWidth="50.0" styleClass="number-buttons" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="69.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Button layoutX="196.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefHeight="40.0" prefWidth="50.0" styleClass="operator-buttons" text="+">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="134.0" layoutY="10.0" mnemonicParsing="false" onAction="#processNumbers" prefHeight="40.0" prefWidth="50.0" styleClass="number-buttons" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="165.0" layoutY="10.0" mnemonicParsing="false" onAction="#processOperators" prefHeight="40.0" prefWidth="109.0" styleClass="operator-buttons" text="=">
                <font>
                   <Font size="18.0" />
                </font>

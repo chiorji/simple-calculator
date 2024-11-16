@@ -14,7 +14,10 @@ public class Calculator extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Calculator.class.getResource("calculator-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 300, 400);
         scene.getStylesheets().add(Objects.requireNonNull(Calculator.class.getResource("calculator.css")).toExternalForm());
-        stage.setTitle("Simple Calculator");
+        stage.setMaxHeight(400);
+        stage.setMaxWidth(300);
+        stage.setResizable(false);
+        stage.setTitle("Basic Calculator");
         stage.setScene(scene);
         stage.show();
     }

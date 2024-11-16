@@ -1,12 +1,28 @@
+#root {
+    -fx-background-color: #008631;
+    -fx-border-color: #cefad0;
+    -fx-border-width: 4;
+}
+
 #accumulator {
-    -fx-background-color: #f5f5f5;
+    -fx-background-color: transparent;
     -fx-font-weight: bold;
     -fx-letter-spacing: 2px;
-    -fx-text-fill: #00008b;
+    -fx-text-fill: #ffffff;
 }
 
 #result {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #00008b;
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
+}
+
+.number-buttons {
+    -fx-background-color:  #00c04b;
+    -fx-text-fill: white;
+}
+
+.operator-buttons {
+     -fx-background-color:  #00ab41;
+    -fx-text-fill: white;
 }
